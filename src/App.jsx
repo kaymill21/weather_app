@@ -39,7 +39,7 @@ function App() {
     <div className="bg_img">
       {!loading ? (
         <>
-          <TextField
+         <TextField
             variant="filled"
             label="Search location"
             className="input"
@@ -49,7 +49,7 @@ function App() {
             onKeyDown={handleSearch}
           />
           <h1 className="city">{data.name}</h1>
-          <div className="group">
+          <div className="group" style={{color: "black"}}>
             <img
               src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
               alt=""
@@ -71,10 +71,7 @@ function App() {
                 <h1>{data.wind.speed.toFixed()} km/h</h1>
               </div>
 
-              <div className="box">
-                <p>Feels Like</p>
-                <h1>{data.main.feels_like.toFixed()} °C</h1>
-              </div>
+              
             </div>
           </Slide>
         </>
